@@ -16,7 +16,7 @@ module.exports = {
       uf
     });
 
-    return response.json(id);
+    return response.json({ id });
   },
 
   async getAll(request, response) {
@@ -24,4 +24,14 @@ module.exports = {
 
     return response.json(ongs);
   }
+
+  // async delete(request, response) {
+  //   const { id } = request.body;
+
+  //   await connection("ongs")
+  //     .where("id", id)
+  //     .delete();
+
+  //   return response.json();
+  // }
 };
